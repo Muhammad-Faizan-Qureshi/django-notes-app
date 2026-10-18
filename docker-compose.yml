@@ -2,7 +2,8 @@ version: "3.8"
 
 services:
   nginx:
-    image: "white10001/django-notes-nginx:latest"
+    build: ./nginx
+    image: nginx
     container_name: "nginx_cont"
     ports:
       - "80:80"
