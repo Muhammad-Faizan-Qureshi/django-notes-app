@@ -30,6 +30,7 @@ pipeline {
         
         stage("Push to Dockerhub") {
             steps {
+                echo "Pushing images using Shared Library"
                 script {
                 docker_push("dockerHubCred", "django_app", "django-notes-app")
                 docker_push("dockerHubCred", "nginx", "django-notes-nginx")
